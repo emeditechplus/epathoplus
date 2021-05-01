@@ -1,0 +1,198 @@
+﻿body {background:url(../Images/body-bg.jpg) no-repeat fixed center top;background-size: 100%;height:100%;}
+
+* {border:0; text-decoration:none; padding:0; margin:0px;}
+.login-panel {
+    margin: 5em auto 0;
+    width: 80%;
+    max-width: 450px;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    padding: 15px 18px 20px;
+    border: 1px solid #31028045;
+    border-top: 10px solid #cb2e6d;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+    .login-panel input[type="text"], .login-panel input[type="password"], select {
+        height: 37px;
+        color: #333 !important;
+        background-color: #e2dbed !important;
+        background-image: none;
+        border: 0;
+        border-bottom: 1px solid #fff !important;
+        border-radius: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        box-shadow: none;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        border-bottom: 1px solid #d2d2d2 !important;
+        border-radius: 20px !important;
+    }
+.login-panel .captcha input[type="text"]{height:37px;color:#333;background-color:#fbfbfb;background-image: none;border: 0;border-bottom: 1px solid #fff;border-radius: 0;margin-bottom: 10px; width:100%;padding: 6px 12px;font-size:14px;line-height:1.42857143;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075); -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;box-shadow:none;transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; border-bottom:1px solid #1C2B36}
+.login-panel .captcha img{float: left;margin-right: 10px; margin-bottom:15px; max-height:55px;}
+.login-panel .captcha a{display:block;color:#f1643f;}
+.login-panel .captcha {font-weight:500;color:#333; }
+.login-panel .captcha br { display:none }
+
+
+/* rohit css  */
+
+
+/* login css  */
+
+@media only screen and (max-width: 992px) {
+    .client-logo {
+        /* text-align: center; */
+
+        height: auto !important;
+        position: initial !important;
+    }
+
+        .client-logo img {
+            width: 90%;
+            height: auto;
+            position: initial !important;
+            left: 5%;
+            top: 15%;
+        }
+
+    .left-bg-light {
+        border-radius: 20px !important;
+    }
+
+    .login h1 {
+        text-align: center;
+    }
+
+    .login .lang {
+        text-align: left !important;
+    }
+
+    .login-panel {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .company-content {
+        margin: 50px 0;
+    }
+
+    .left-bg-light {
+        height: inherit !important;
+        padding-bottom: 20px !important;
+    }
+}
+body {
+    background: url(../Images/nurse-doctor-medicine.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.login h1 {
+    font-size: 30px;
+    padding-left: 30px;
+    color: #fff;
+}
+
+.login h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 31px;
+    font-weight: 800;
+
+   
+}
+
+.login .lang {
+    text-align: right;
+    padding-top: 5px;
+    /* margin: 0; */
+    padding-right: 0;
+    color: #ffffffa6;
+}
+
+.login .btn {
+    background-color: #cb2e6d;
+    border: 0;
+    /* width: 100% !important; */
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+
+.client-logo {
+    text-align: center;
+    background: aliceblue;
+    height: 150px;
+    position: relative;
+}
+
+    .client-logo img {
+        width: 90%;
+        height: auto;
+  
+        position: absolute;
+        left: 5%;
+        top: 15%;
+    }
+
+
+.margin-top20{
+    margin-top:20px;
+}
+
+.left-bg-light {
+    background-color: #270656;
+    height: 580px;
+    border-radius: 20px 0 0 20px;
+}
+.copyright {
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff9e;
+    margin-top: 41px;
+}
+
+.company-content {
+    margin: 20px 0;
+}
+    
+    .company-content .title {
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+    }
+
+        .company-content .title:after {
+            border-bottom: 2px solid #ffffff75;
+            width: 75px;
+            content: "";
+            display: block;
+            padding-top: 18px;
+            margin: 0 auto;
+        }    
+    
+        .company-content p {
+            font-size: 14px;
+            /* font-weight: 600; */
+            text-align: center;
+            margin: 20px 15px;
+            color: #fff;
+            line-height: 25px;
+        }
+
+    .pd-0{
+        padding:0px;
+    }
+    .pt-20{
+        padding-top:20px;}
+    }
+

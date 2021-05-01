@@ -1,0 +1,220 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <!-- Toaster js -->
+
+
+    <script src="~/Scripts/toastrsample.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~css/menustyle.css" rel="stylesheet">
+    <!-- Toaster Core CSS -->
+    <link href="~/Template/dist/toastrsample.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    @*<link href="~/Template/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">*@
+    <!-- Custom CSS -->
+    <link href="~/Template/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+
+
+
+    <link href="~/Scripts/datetimepicker/jqueryui.css" rel="stylesheet" />
+    <link href="~/Content/Validation.css" rel="stylesheet" />
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+
+
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Custom Fonts -->
+    <link href="~/Template/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <!-- Navigation -->
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <!-- /.navbar-header -->
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <b> Hi  @Session["USERNAME"] </b>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu drop down-user">
+                        <li>
+                            <a href="/user/login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+            <div class="p-4 pt-5">
+                <!--<h1><a href="index.html" class="logo">Splash</a></h1>-->
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Master</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#primarymaster" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Primary Master</a>
+                                <ul class="collapse list-unstyled" id="primarymaster">
+                                    <li>
+                                        <a href="#">A</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="#">B</a>
+
+                                    </li>
+                                </ul>
+                            <li>
+                                <a href="#">Home 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <!--<div class="mb-5">
+                    <h3 class="h6">Subscribe for newsletter</h3>
+                    <form action="#" class="colorlib-subscribe-form">
+            <div class="form-group d-flex">
+                <div class="icon"><span class="icon-paper-plane"></span></div>
+              <input type="text" class="form-control" placeholder="Enter Email Address">
+            </div>
+          </form>
+                </div>-->
+
+
+
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="row">
+                <script src="~/Scripts/datetimepicker/jquery-1.12.4.js"></script>
+                <script src="~/js/jquery.min.js"></script>
+                <script src="~/js/popper.js"></script>
+                <script src="~/Template/vendor/bootstrap/js/bootstrap.min.js"></script>
+                <script src="~/js/main.js"></script>
+                <script src="~/Scripts/jquery.validate.min.js"></script>
+
+                <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+                @*<script src="~/Scripts/datetimepicker/jqueryui.js"></script>*@
+                <script src="~/Scripts/toastr.min.js"></script>
+                <script src="~/Scripts/jquery.signalR-2.2.3.min.js"></script>
+
+
+                <script src="~/signalr/Hubs/"></script>
+                <script>
+                    $(document).ready(function () {
+                        toastr.options.onCloseClick = function () { alert("welcome"); };
+                        // Proxy created on the fly
+                        var hub = $.connection.mynotificationHub;
+
+                        // Declare a function on the hub hub so the server can invoke it
+                        hub.client.displayStatus = function () {
+                            getData();
+                        };
+
+                        // Start the connection
+                        $.connection.hub.start();
+                        getData();
+
+                        function getData() {
+                            var divNotificaion = $('#divNotificaion');
+                            $.ajax({
+                                url: '/Notification/GetNotification',
+                                type: 'GET',
+                                datatype: 'json',
+                                success: function (data) {
+                                    data = $.parseJSON(data);
+                                    if (data.length > 0) {
+
+                                        toastr.options =
+                                            {
+                                                "closeButton": true,
+                                                "debug": false,
+                                                "newestOnTop": false,
+                                                "progressBar": true,
+                                                "positionClass": "toast-top-center",
+                                                "preventDuplicates": false,
+                                                "onclick": null,
+                                                "showDuration": "300",
+                                                "hideDuration": "1000",
+                                                "timeOut": 0,
+                                                "extendedTimeOut": 0,
+                                                "showEasing": "swing",
+                                                "hideEasing": "linear",
+                                                "showMethod": "fadeIn",
+                                                "hideMethod": "fadeOut",
+                                                "tapToDismiss": false
+                                            }
+                                        for (var i = 0; i < data.length; i++) {
+                                            toastr.error(data[i].Message, "Message");
+                                        }
+                                    }
+                                }, error: function (r, e, w) {
+
+                                }
+                            });
+
+
+                        }
+                    })
+                </script>
+                @RenderBody()
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+</body>
+</html>
